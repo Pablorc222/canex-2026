@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Canex · Criadero de perros con razas seleccionadas</title>
+<meta name="description" content="Canex: criadero especializado con crianza responsable, razas seleccionadas, seguimiento veterinario, documentación y entregas en toda España.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6f3ee;--bg2:#ebe5db;--card:#ffffff;--ink:#1d1a17;--muted:#645d54;--accent:#b8741a;--line:#ddd4c6;--dark:#141211;--dark2:#1f1b18;--on-dark:#f3ece2;--on-accent:#fff;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#120f0d;--bg2:#1a1613;--card:#201b17;--ink:#f1e9de;--muted:#b3a899;--accent:#e0953a;--line:#33291f;--dark:#0b0908;--dark2:#17120f;--on-accent:#1a1005;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#120f0d;--bg2:#1a1613;--card:#201b17;--ink:#f1e9de;--muted:#b3a899;--accent:#e0953a;--line:#33291f;--dark:#0b0908;--dark2:#17120f;--on-accent:#1a1005;color-scheme:dark}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 72px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Barlow",system-ui,sans-serif;font-size:17px;line-height:1.65}
+h1,h2,h3{font-family:"Barlow Condensed","Arial Narrow",sans-serif;text-transform:uppercase;line-height:1;margin:0;font-weight:800;letter-spacing:.01em}
+a{color:inherit}
+.wrap{max-width:1100px;margin:0 auto;padding:0 24px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:color-mix(in srgb,var(--dark) 92%,transparent);backdrop-filter:blur(12px);color:var(--on-dark);border-bottom:1px solid rgba(255,255,255,.08)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-family:"Barlow Condensed",sans-serif;font-weight:800;font-size:30px;letter-spacing:.08em;text-decoration:none}
+.logo b{color:var(--accent)}
+.links{display:flex;gap:26px;align-items:center;font-weight:600;font-size:14px;letter-spacing:.1em;text-transform:uppercase}
+.links a{text-decoration:none;opacity:.75}
+.links a:hover{opacity:1;color:var(--accent)}
+.btn{display:inline-block;padding:15px 32px;background:var(--accent);color:var(--on-accent);text-decoration:none;font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:18px;letter-spacing:.1em;text-transform:uppercase;border:2px solid var(--accent);transition:.2s;clip-path:polygon(0 0,calc(100% - 12px) 0,100% 12px,100% 100%,12px 100%,0 calc(100% - 12px))}
+.btn:hover{filter:brightness(1.1);transform:translateY(-2px)}
+.btn.ghost{background:transparent;color:inherit;border-color:currentColor}
+.links .btn{padding:8px 20px;font-size:15px;opacity:1;color:var(--on-accent)}
+.hero{background:var(--dark);color:var(--on-dark);padding:100px 0 110px;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(700px 420px at 85% 20%,rgba(224,149,58,.22),transparent 70%),repeating-linear-gradient(115deg,transparent 0 46px,rgba(255,255,255,.02) 46px 47px)}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.2fr .8fr;gap:50px;align-items:center}
+.kicker{color:var(--accent);font-family:"Barlow Condensed",sans-serif;font-weight:700;letter-spacing:.3em;text-transform:uppercase;font-size:15px;margin-bottom:18px}
+.hero h1{font-size:clamp(54px,9vw,116px);margin-bottom:22px}
+.hero h1 span{color:var(--accent)}
+.hero p{font-size:19px;color:rgba(243,236,226,.75);max-width:520px;margin:0 0 34px}
+.cta{display:flex;gap:16px;flex-wrap:wrap}
+.frame{aspect-ratio:4/5;border:2px solid rgba(255,255,255,.12);background:linear-gradient(160deg,var(--dark2),#2c241d);display:grid;place-items:center;position:relative;clip-path:polygon(0 0,calc(100% - 40px) 0,100% 40px,100% 100%,40px 100%,0 calc(100% - 40px));overflow:hidden}
+.frame img{width:100%;height:100%;object-fit:cover}
+.frame .ph{font-size:104px;text-align:center}
+.frame .ph small{display:block;font-family:"Barlow",sans-serif;font-size:13px;letter-spacing:.2em;text-transform:uppercase;opacity:.6;margin-top:8px}
+.strip{background:var(--accent);color:var(--on-accent)}
+.strip .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.strip div{padding:20px 0;font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:19px;letter-spacing:.08em;text-transform:uppercase;text-align:center}
+section{padding:92px 0}
+.eyebrow{color:var(--accent);font-family:"Barlow Condensed",sans-serif;font-weight:700;letter-spacing:.3em;text-transform:uppercase;font-size:15px;margin-bottom:12px}
+h2{font-size:clamp(40px,5.6vw,68px);margin-bottom:16px}
+.lead{color:var(--muted);max-width:640px;margin:0 0 46px}
+.groups{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.group{background:var(--card);border:1px solid var(--line);padding:32px 28px;border-top:5px solid var(--accent)}
+.group i{font-style:normal;font-size:40px;display:block;margin-bottom:10px}
+.group h3{font-size:30px;margin-bottom:14px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips span{background:var(--bg2);border:1px solid var(--line);padding:5px 14px;font-size:15px;font-weight:500}
+.note{margin-top:26px;color:var(--muted);font-size:14px;border-left:3px solid var(--accent);padding-left:16px;max-width:760px}
+.alt{background:var(--bg2);border-block:1px solid var(--line)}
+.feats{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.feat{background:var(--card);border:1px solid var(--line);padding:30px 24px}
+.feat b{font-family:"Barlow Condensed",sans-serif;font-size:50px;color:var(--accent);line-height:1;font-weight:800}
+.feat h3{font-size:25px;margin:8px 0 8px}
+.feat p{margin:0;color:var(--muted);font-size:15px}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);border-top:2px solid var(--ink)}
+.step{padding:28px 24px 8px 0}
+.step b{font-family:"Barlow Condensed",sans-serif;font-size:56px;color:var(--accent);font-weight:800;line-height:1}
+.step h3{font-size:26px;margin:6px 0}
+.step p{margin:0;color:var(--muted);font-size:15px}
+.gal{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.gal div{aspect-ratio:1;background:linear-gradient(150deg,var(--card),var(--bg2));border:1px solid var(--line);display:grid;place-items:center;font-size:44px;overflow:hidden}
+.gal div:first-child{grid-column:span 2;grid-row:span 2;aspect-ratio:auto;font-size:80px}
+.gal img{width:100%;height:100%;object-fit:cover}
+details{background:var(--card);border:1px solid var(--line);padding:18px 24px;margin-bottom:12px}
+summary{cursor:pointer;font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:22px;letter-spacing:.04em;text-transform:uppercase}
+details p{margin:10px 0 0;color:var(--muted)}
+.contact{background:var(--dark);color:var(--on-dark);text-align:center;position:relative;overflow:hidden}
+.contact::before{content:"";position:absolute;inset:0;background:radial-gradient(600px 300px at 50% 0,rgba(224,149,58,.25),transparent 70%)}
+.contact .wrap{position:relative}
+.contact h2{margin-inline:auto;max-width:800px}
+.contact .lead{color:rgba(243,236,226,.7);margin-inline:auto}
+.num{display:block;font-family:"Barlow Condensed",sans-serif;font-weight:800;font-size:clamp(46px,9vw,100px);text-decoration:none;color:var(--accent);margin:6px 0 28px;letter-spacing:.04em;line-height:1}
+.contact .cta{justify-content:center}
+footer{background:var(--dark);color:rgba(243,236,226,.5);padding:24px 0;text-align:center;font-size:14px;border-top:1px solid rgba(255,255,255,.08)}
+@media(max-width:860px){.hero .wrap{grid-template-columns:1fr}.groups,.feats{grid-template-columns:1fr}.steps,.strip .wrap{grid-template-columns:repeat(2,1fr)}.gal{grid-template-columns:repeat(2,1fr)}.gal div:first-child{grid-column:span 2}.links a:not(.btn){display:none}section{padding:60px 0}.hero{padding:56px 0 64px}.frame{max-width:320px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+<a class="logo" href="#inicio">CAN<b>EX</b></a>
+<div class="links"><a href="#razas">Razas</a><a href="#garantias">Garantías</a><a href="#proceso">Proceso</a><a href="#dudas">Dudas</a><a class="btn" href="#contacto">Contacto</a></div>
+</div></nav>
+
+<header class="hero" id="inicio"><div class="wrap">
+<div>
+<div class="kicker">Criadero especializado · Entregas en toda España</div>
+<h1>Razas <span>seleccionadas.</span> Crianza responsable.</h1>
+<p>En Canex criamos con criterio y acompañamos a cada familia antes y después de la entrega, con seguimiento veterinario y toda la documentación en regla.</p>
+<div class="cta"><a class="btn" href="https://wa.me/34745057390" target="_blank" rel="noopener">Hablar por WhatsApp</a><a class="btn ghost" href="#razas">Ver razas</a></div>
+</div>
+<div class="frame">
+<!-- Para una foto real: sustituye el div .ph por <img src="hero.jpg" alt="Cachorro de Canex"> -->
+<div class="ph">🐕<small>Foto principal</small></div>
+</div>
+</div></header>
+
+<div class="strip"><div class="wrap"><div>Seguimiento veterinario</div><div>Documentación en regla</div><div>Entregas en toda España</div><div>Asesoramiento</div></div></div>
+
+<section id="razas"><div class="wrap">
+<div class="eyebrow">Nuestras razas</div>
+<h2>Una selección con carácter</h2>
+<p class="lead">Trabajamos con razas de guarda, de trabajo y de compañía. Consulta la disponibilidad actual de cada una.</p>
+<div class="groups">
+<div class="group"><i>🛡️</i><h3>Guarda y razas grandes</h3><div class="chips"><span>Mastín Leonés</span><span>Mastín Español</span><span>Kangal Turco</span><span>Gran Danés</span><span>Dogo Argentino</span><span>Alano Español</span></div></div>
+<div class="group"><i>🐺</i><h3>Trabajo y pastoreo</h3><div class="chips"><span>Pastor Alemán</span><span>Pastor Belga Malinois</span></div></div>
+<div class="group"><i>🐶</i><h3>Terriers y compañía</h3><div class="chips"><span>Jack Russell Terrier</span><span>Bull Terrier</span><span>American Staffordshire</span><span>Pitbull</span><span>Bulldog Francés</span><span>Chihuahua</span><span>Perro de Agua Español</span><span>Braco Alemán</span></div></div>
+</div>
+<p class="note">Algunas razas, como el Dogo Argentino o el American Staffordshire Terrier, requieren licencia de tenencia de perros potencialmente peligrosos. Te informamos de todos los requisitos antes de la reserva.</p>
+</div></section>
+
+<section class="alt" id="garantias"><div class="wrap">
+<div class="eyebrow">Garantías</div>
+<h2>Todo en orden, desde el primer día</h2>
+<p class="lead">Queremos que la llegada de tu perro sea segura y sin sorpresas.</p>
+<div class="feats">
+<div class="feat"><b>01</b><h3>Control veterinario</h3><p>Revisiones, vacunación y desparasitación antes de la entrega.</p></div>
+<div class="feat"><b>02</b><h3>Documentación</h3><p>Cartilla o pasaporte y toda la documentación en regla.</p></div>
+<div class="feat"><b>03</b><h3>Entregas</h3><p>Enviamos a cualquier punto de España con seguimiento.</p></div>
+<div class="feat"><b>04</b><h3>Asesoramiento</h3><p>Te guiamos antes y después de la adopción.</p></div>
+</div>
+</div></section>
+
+<section id="proceso"><div class="wrap">
+<div class="eyebrow">Cómo trabajamos</div>
+<h2>Del primer mensaje a casa</h2>
+<p class="lead">Un proceso claro, transparente y cercano.</p>
+<div class="steps">
+<div class="step"><b>1</b><h3>Contacto</h3><p>Escríbenos y dinos qué raza buscas.</p></div>
+<div class="step"><b>2</b><h3>Valoración</h3><p>Hablamos de tu hogar y de tus necesidades.</p></div>
+<div class="step"><b>3</b><h3>Reserva</h3><p>Aparta tu cachorro y recibe novedades.</p></div>
+<div class="step"><b>4</b><h3>Entrega</h3><p>Llega a casa con su documentación y nuestro apoyo.</p></div>
+</div>
+</div></section>
+
+<section class="alt"><div class="wrap">
+<div class="eyebrow">Galería</div>
+<h2>Nuestros ejemplares</h2>
+<p class="lead">Mira más fotos y vídeos en nuestras redes.</p>
+<div class="gal"><div>🐕</div><div>🐾</div><div>🐶</div><div>🦴</div><div>🐺</div><div>🛡️</div></div>
+</div></section>
+
+<section id="dudas"><div class="wrap" style="max-width:780px">
+<div class="eyebrow">Dudas</div>
+<h2>Preguntas frecuentes</h2><br>
+<details><summary>¿Hacéis entregas fuera de mi provincia?</summary><p>Sí, realizamos entregas en toda España. Escríbenos y te explicamos cómo se organiza.</p></details>
+<details><summary>¿Qué documentación recibo?</summary><p>El cachorro se entrega con su cartilla o pasaporte y la documentación en regla.</p></details>
+<details><summary>¿Puedo reservar una raza concreta?</summary><p>Sí. Consúltanos la disponibilidad y las próximas camadas por WhatsApp.</p></details>
+<details><summary>¿Me ayudáis después de la entrega?</summary><p>Por supuesto. Ofrecemos seguimiento y asesoramiento también después de la adopción.</p></details>
+</div></section>
+
+<section class="contact" id="contacto"><div class="wrap">
+<div class="eyebrow">Contacto</div>
+<h2>Encuentra a tu compañero</h2>
+<p class="lead">Escríbenos o llámanos y te contamos la disponibilidad de cada raza.</p>
+<a class="num" href="tel:+34745057390">745 05 73 90</a>
+<div class="cta">
+<a class="btn" href="https://wa.me/34745057390" target="_blank" rel="noopener">WhatsApp</a>
+<a class="btn ghost" href="https://www.instagram.com/canex.2026/" target="_blank" rel="noopener">Instagram</a>
+<a class="btn ghost" href="https://www.tiktok.com/@canex2026" target="_blank" rel="noopener">TikTok</a>
+</div>
+</div></section>
+
+<footer><div class="wrap">© 2026 Canex · Criadero especializado · Entregas en toda España</div></footer>
+</body>
+</html>
